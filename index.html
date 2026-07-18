@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Endométrio reprodutivo no ESHRE 2026: pauta do congresso versus literatura publicada</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--tinta:#111827;--papel:#FFFFFF;--linha:#E5E7EB;--suave:#4B5563;--cong:#1D4ED8;--lit:#B45309;--fundo-alt:#F9FAFB}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:'Merriweather', Georgia, serif;line-height:1.8;font-size:16px;font-weight:300}
+.col{max-width:800px;margin:0 auto;padding:72px 40px 120px}
+.eyebrow{font-family:'Inter', sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--suave);margin-bottom:24px;font-weight:600;border-bottom:1px solid var(--linha);padding-bottom:8px}
+h1.title{font-family:'Merriweather', Georgia, serif;font-size:38px;line-height:1.25;font-weight:700;margin:0 0 16px;letter-spacing:-0.01em;color:var(--tinta)}
+.subtitle{font-family:'Merriweather', Georgia, serif;font-size:19px;font-weight:300;font-style:italic;color:var(--suave);margin:0 0 28px;line-height:1.5}
+.byline{font-family:'Inter', sans-serif;font-size:14px;color:var(--tinta);font-weight:500;padding-bottom:32px;border-bottom:1px solid var(--linha);margin-bottom:48px}
+.abstract{font-size:15px;margin:0 0 48px;padding:32px;background:var(--fundo-alt);border-top:2px solid var(--tinta);border-bottom:2px solid var(--tinta)}
+.abstract .lbl{font-family:'Inter', sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta);font-weight:700;margin-bottom:12px;display:block}
+.abstract b{font-family:'Inter', sans-serif;font-size:13px;letter-spacing:.02em;text-transform:uppercase;color:var(--tinta);font-weight:700}
+h2.sec{font-family:'Merriweather', Georgia, serif;font-size:20px;font-weight:700;margin:64px 0 24px;color:var(--tinta);display:flex;align-items:center;border-bottom:1px solid var(--linha);padding-bottom:8px}
+h2.sec::before{content:attr(data-n) ". ";color:var(--tinta);margin-right:8px;font-variant-numeric:tabular-nums}
+h3{font-family:'Merriweather', Georgia, serif;font-size:16px;font-weight:700;margin:32px 0 12px;color:var(--tinta);font-style:italic}
+p{margin:0 0 18px;text-align:justify}
+.fig{margin:40px 0;padding:32px;background:var(--papel);border:1px solid var(--linha);box-shadow:0 2px 4px rgba(0,0,0,0.02)}
+.figcap{font-family:'Inter', sans-serif;font-size:13px;color:var(--suave);margin-top:20px;line-height:1.6;padding-top:16px;border-top:1px solid var(--linha)}
+.figcap b{color:var(--tinta);font-weight:600}
+table{width:100%;border-collapse:collapse;font-family:'Inter', sans-serif;font-size:14px;margin:24px 0;border-top:2px solid var(--tinta);border-bottom:2px solid var(--tinta)}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--linha)}
+th{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--tinta);font-weight:600;border-bottom:1px solid var(--tinta)}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:none}
+.cap{font-family:'Inter', sans-serif;font-size:12.5px;color:var(--suave);margin-top:8px;line-height:1.5}
+.foot{margin-top:80px;padding-top:32px;border-top:1px solid var(--linha);font-family:'Inter', sans-serif;font-size:12.5px;color:var(--suave);line-height:1.6}
+.kbd{font-family:ui-monospace,monospace;font-size:12px;background:var(--fundo-alt);padding:2px 6px;border:1px solid var(--linha);border-radius:2px;color:var(--tinta)}
+.transbox{margin:32px 0;display:flex;flex-direction:column;gap:16px}
+.trans{border:1px solid var(--linha);background:var(--papel)}
+.trans summary{cursor:pointer;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;font-family:'Inter', sans-serif;list-style:none;background:var(--fundo-alt);border-bottom:1px solid transparent}
+.trans[open] summary{border-bottom-color:var(--linha)}
+.trans summary::-webkit-details-marker{display:none}
+.trans summary::before{content:"+";color:var(--tinta);font-weight:700;margin-right:12px;font-size:16px}
+.trans[open] summary::before{content:"\2013"}
+.tnome{font-weight:600;font-size:14px;color:var(--tinta);flex:1}
+.teixo{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--suave);border:1px solid var(--linha);padding:2px 8px;border-radius:2px}
+.tbody{padding:16px 20px 24px}
+.tlabel{font-family:'Inter', sans-serif;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--tinta);margin:16px 0 12px;font-weight:600}
+.vars{display:flex;flex-wrap:wrap;gap:8px}
+.var{font-family:'Inter', sans-serif;font-size:13px;background:var(--fundo-alt);color:var(--tinta);padding:4px 10px;border:1px solid var(--linha)}
+.query{display:flex;flex-direction:column;gap:8px}
+code.q{font-family:ui-monospace,'SF Mono',monospace;font-size:12.5px;line-height:1.6;background:var(--fundo-alt);color:var(--tinta);padding:12px 16px;white-space:pre-wrap;word-break:break-word;border:1px solid var(--linha);border-left:3px solid var(--lit)}
+.andop{font-family:'Inter', sans-serif;font-size:11px;font-weight:700;color:var(--tinta);letter-spacing:.08em;margin-left:16px}
+ol.refs{list-style:none;counter-reset:none;padding:0;margin:16px 0}
+ol.refs li{font-family:'Inter', sans-serif;font-size:13.5px;line-height:1.6;padding:12px 0 12px 32px;position:relative}
+.ref-n{position:absolute;left:0;color:var(--tinta);font-weight:400}
+@media(max-width:600px){h1.title{font-size:30px}.col{padding:40px 24px 80px}}
+</style></head><body><div class="col">
+
+<div class="eyebrow">Estudo bibliométrico &middot; endométrio reprodutivo &middot; método reprodutível</div>
+<h1 class="title">Endométrio reprodutivo no ESHRE 2026: pauta do congresso versus literatura publicada</h1>
+<div class="subtitle">Um mapeamento reprodutível de cobertura e lacunas temáticas via OpenAlex (2021 a 2026)</div>
+<div class="byline">Fernanda Rodrigues e Francisco Neri &middot; 18/07/2026</div>
+
+<div class="abstract">
+<div class="lbl">Abstract</div>
+<p style="margin:0"><b>Objective.</b> To reproducibly characterize how the ESHRE 2026 congress agenda on the reproductive endometrium is positioned against the scientific literature published over five years. <b>Methods.</b> A two-axis bibliometric study: 37 lectures curated and classified by a deterministic semantic layer; and 18,374 articles isolated in OpenAlex (window 2021-07-19 to 2026-07-18) using a double inclusion anchor (reproductive endometrium AND assisted reproduction, excluding oncology). Congress subthemes were cross-referenced with the volume of literature per subtheme, and gaps were defined by the lower quartile (Q1 &lt; 2,044 articles). <b>Results.</b> The 37 lectures were distributed across 9 subthemes; 2 subthemes fell into the gap zone, of which 2 were addressed by the congress. <b>Conclusion.</b> The method offers an auditable and replicable reading of the alignment between a congress agenda and the living literature of the reproductive endometrium.</p>
+</div>
+
+<h2 class="sec" data-n="1">Introdução</h2>
+<p>Cada edição de um congresso científico define uma pauta: um recorte de temas que a comunidade elege destacar. No campo do endométrio reprodutivo, saber o quanto essa pauta acompanha ou subrepresenta a literatura publicada é uma pergunta legítima e pouco respondida de forma objetiva. Este trabalho propõe um método reprodutível para respondê-la no ESHRE 2026, cruzando o conteúdo das apresentações de endométrio reprodutivo com o volume de produção científica indexada no OpenAlex.</p>
+<p>A ênfase está na reprodutibilidade. Em vez de classificar as apresentações por um modelo de linguagem opaco, cuja saída varia no tempo, a classificação usa uma camada semântica versionada e determinística, e as consultas à literatura empregam strings de busca explícitas e auditáveis.</p>
+
+<h2 class="sec" data-n="2">Métodos</h2>
+<p>A Figura 1 resume a estratégia inteira, da fala do palestrante ao volume de literatura comparável. Os cinco estágios mostram como um modelo de linguagem extrai os termos falados, como esses termos viram o vocabulário controlado da camada semântica, e como cada subtema é traduzido em uma busca verificável no OpenAlex.</p>
+
+<div class="fig">
+<svg viewBox="0 0 720 440" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:'Inter', sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9CA3AF" />
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.05" />
+    </filter>
+  </defs>
+  
+  <rect x="20" y="20" width="200" height="270" rx="8" fill="#EFF6FF" opacity="0.6"/>
+  <text x="120" y="45" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle" letter-spacing="0.06em">MUNDO DO CONGRESSO</text>
+  
+  <rect x="240" y="20" width="240" height="270" rx="8" fill="#F3F4F6" opacity="0.6"/>
+  <text x="360" y="45" font-size="11" font-weight="700" fill="#4B5563" text-anchor="middle" letter-spacing="0.06em">PONTE SEMÂNTICA</text>
+  
+  <rect x="500" y="20" width="200" height="270" rx="8" fill="#FEF3C7" opacity="0.4"/>
+  <text x="600" y="45" font-size="11" font-weight="700" fill="#D97706" text-anchor="middle" letter-spacing="0.06em">MUNDO DA LITERATURA</text>
+  
+  <path d="M 120 145 L 120 170" stroke="#9CA3AF" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 215 210 Q 235 210, 245 200 T 265 170" stroke="#9CA3AF" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="4,4"/>
+  <path d="M 455 170 Q 475 210, 485 210 T 505 210" stroke="#9CA3AF" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="4,4"/>
+  <path d="M 600 145 L 600 170" stroke="#9CA3AF" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <g transform="translate(30, 60)">
+    <rect width="180" height="85" rx="6" fill="#FFF" filter="url(#shadow)" stroke="#BFDBFE" stroke-width="1.5"/>
+    <circle cx="20" cy="24" r="12" fill="#2563EB"/>
+    <text x="20" y="28" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">1</text>
+    <text x="40" y="28" font-size="12" font-weight="700" fill="#1D4ED8">PALESTRAS</text>
+    <text x="14" y="52" font-size="11" fill="#4B5563">37 aulas do ESHRE 2026:</text>
+    <text x="14" y="68" font-size="11" fill="#4B5563">áudio, vídeo e legendas</text>
+  </g>
+
+  <g transform="translate(30, 175)">
+    <rect width="180" height="100" rx="6" fill="#FFF" filter="url(#shadow)" stroke="#D1D5DB" stroke-width="1.5"/>
+    <circle cx="20" cy="24" r="12" fill="#4B5563"/>
+    <text x="20" y="28" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">2</text>
+    <text x="38" y="28" font-size="10.5" font-weight="800" fill="#4B5563">EXTRAÇÃO LLM (Claude)</text>
+    <text x="14" y="52" font-size="11" fill="#4B5563">O modelo LLM transcreve,</text>
+    <text x="14" y="68" font-size="11" fill="#4B5563">normaliza o jargão clínico</text>
+    <text x="14" y="84" font-size="11" fill="#4B5563">e extrai termos chave.</text>
+  </g>
+
+  <g transform="translate(255, 95)">
+    <rect width="210" height="150" rx="6" fill="#FFF" filter="url(#shadow)" stroke="#111827" stroke-width="2"/>
+    <circle cx="24" cy="26" r="12" fill="#111827"/>
+    <text x="24" y="30" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">3</text>
+    <text x="44" y="30" font-size="12" font-weight="800" fill="#111827">CAMADA SEMÂNTICA</text>
+    <text x="16" y="56" font-size="11.5" fill="#374151">Cada termo falado vira uma</text>
+    <text x="16" y="74" font-size="11.5" fill="#374151">variável com sinônimos,</text>
+    <text x="16" y="92" font-size="11.5" fill="#374151">agrupada em 9 subtemas.</text>
+    <text x="16" y="112" font-size="11.5" fill="#374151">Classificação determinística:</text>
+    <text x="16" y="130" font-size="11.5" fill="#374151">não decidida pelo modelo.</text>
+  </g>
+
+  <g transform="translate(510, 60)">
+    <rect width="180" height="100" rx="6" fill="#FFF" filter="url(#shadow)" stroke="#FDE68A" stroke-width="1.5"/>
+    <circle cx="20" cy="24" r="12" fill="#D97706"/>
+    <text x="20" y="28" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">4</text>
+    <text x="40" y="28" font-size="12" font-weight="700" fill="#D97706">BUSCA (OpenAlex)</text>
+    <text x="14" y="52" font-size="11" fill="#4B5563">Âncora: Endométrio em</text>
+    <text x="14" y="68" font-size="11" fill="#4B5563">Reprodução Assistida.</text>
+    <text x="14" y="84" font-size="11" fill="#4B5563">Cada subtema vira string.</text>
+  </g>
+
+  <g transform="translate(510, 175)">
+    <rect width="180" height="100" rx="6" fill="#FFF" filter="url(#shadow)" stroke="#FDE68A" stroke-width="1.5"/>
+    <circle cx="20" cy="24" r="12" fill="#D97706"/>
+    <text x="20" y="28" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">5</text>
+    <text x="40" y="28" font-size="12" font-weight="700" fill="#D97706">LITERATURA</text>
+    <text x="14" y="52" font-size="11" fill="#4B5563">A busca isola 18.374</text>
+    <text x="14" y="68" font-size="11" fill="#4B5563">artigos no OpenAlex,</text>
+    <text x="14" y="84" font-size="11" fill="#4B5563">comparáveis com a pauta.</text>
+  </g>
+
+  <g transform="translate(20, 310)">
+    <rect width="680" height="110" rx="8" fill="#FFF" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="20" y="28" font-size="11" font-weight="700" fill="#4B5563" letter-spacing="0.04em">EXEMPLO REAL DE UM SUBTEMA: <tspan fill="#111827">Receptividade e Janela de Implantação</tspan></text>
+    
+    <text x="20" y="50" font-size="10.5" fill="#6B7280">Termos reconhecidos (extraídos das falas):</text>
+    <text x="240" y="51" font-size="10.5" font-family="monospace" font-weight="600" fill="#374151">endometrial receptivity</text>
+    <text x="405" y="51" font-size="10.5" font-family="monospace" font-weight="600" fill="#374151">window of implantation</text>
+    <text x="555" y="51" font-size="10.5" font-family="monospace" font-weight="600" fill="#374151">receptive endometrium</text>
+    
+    <text x="20" y="78" font-size="10.5" fill="#6B7280">String enviada ao OpenAlex:</text>
+    <text x="20" y="96" font-size="11" font-family="monospace" fill="#D97706" font-weight="600">"receptivity" | "receptive" | "window of implantation" | "implantation window" | "woi"</text>
+  </g>
+</svg>
+<div class="figcap"><b>Figura 1.</b> Estratégia semântica de ponta a ponta. Estágio 1: as 37 palestras. Estágio 2: transcrição e leitura por modelo de linguagem, que normaliza o jargão e extrai os termos recorrentes. Estágio 3: os termos viram variáveis controladas da camada semântica, agrupadas em 9 subtemas, com classificação determinística. Estágio 4: cada subtema recebe uma string de busca com dupla âncora. Estágio 5: a busca isola 18.374 artigos no OpenAlex. O painel à direita mostra um exemplo real de subtema e seus termos.</div>
+</div>
+
+<h3>2.1 Desenho de dois eixos</h3>
+<p>O estudo cruza dois eixos independentes. O primeiro é o corpus do congresso: 37 palestras de endométrio reprodutivo, curadas a partir das transcrições legendadas com marcação temporal e segmentadas por palestra. A segmentação é heurística, apoiada em marcadores de transição entre palestrantes, o que introduz incerteza controlada nos limites de cada fala. O segundo eixo é a literatura publicada, isolada no OpenAlex.</p>
+<h3>2.2 Camada semântica determinística</h3>
+<p>As palestras foram classificadas por uma camada semântica de conceitos de endométrio reprodutivo, cada um mapeado a um subtema com seus sinônimos. A classificação é determinística: o mesmo texto produz sempre o mesmo subtema, o que confere reprodutibilidade frente a classificadores estocásticos. O papel do modelo de linguagem foi restrito a extrair e normalizar os termos falados; a decisão de qual termo entra em qual subtema é da camada versionada, não do modelo.</p>
+<h3>2.3 Literatura e dupla âncora de inclusão</h3>
+<p>A literatura foi isolada por uma dupla âncora aplicada a título e resumo: termos de anatomia endometrial e uterina, em conjunção com termos de reprodução assistida, excluindo oncologia. A janela foi de cinco anos (2021-07-19 a 2026-07-18). O procedimento isolou 18.374 artigos como universo de referência.</p>
+<h3>2.4 Definição de lacuna e cobertura</h3>
+<p>Um subtema foi classificado como lacuna quando seu volume de publicação caiu no quartil inferior da distribuição (Q1 &lt; 2.044 artigos). Essa distribuição tem apenas 9 valores, um por subtema: "quartil inferior" aqui equivale, na prática, a selecionar os 2 subtemas de menor volume, não a um corte calculado sobre uma amostra ampla. O critério é declarado nesses termos para não sugerir um poder estatístico que a base de 9 pontos não sustenta. A cobertura foi medida pela interseção entre os subtemas abordados no congresso e o universo da literatura; é uma medida de sobreposição temática, não de profundidade ou qualidade científica.</p>
+
+<h2 class="sec" data-n="3">Resultados</h2>
+<p>O subtema mais representado na pauta foi Preparo Endometrial e FET, com 11 das 37 palestras (29,7% do congresso). A Figura 2 lista os 9 subtemas em barras pareadas, ordenadas pelo volume de literatura: para cada subtema, uma linha mostra a barra de artigos publicados (esquerda) e a barra de palestras no congresso (direita), lado a lado. A faixa sombreada ao final da lista marca a zona de lacuna: como a distribuição tem apenas 9 subtemas, esse quartil inferior corresponde aos 2 subtemas de menor volume de literatura, não a um corte estatístico sobre uma amostra ampla.</p>
+
+<div class="fig">
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;height:auto;font-family:'Inter', sans-serif">
+  <rect x="10" y="334" width="780" height="72" fill="#FEE2E2" opacity="0.3" rx="4" />
+  <text x="400" y="420" font-size="10.5" fill="#EF4444" font-weight="600" text-anchor="middle" font-style="italic">ZONA DE LACUNA (Quartil Inferior &lt; 2.044 artigos)</text>
+  
+  <text x="140" y="40" font-size="11" font-weight="700" fill="#D97706" text-anchor="middle" letter-spacing="0.04em">ARTIGOS PUBLICADOS</text>
+  <text x="140" y="56" font-size="9" fill="#6B7280" text-anchor="middle">OpenAlex (2021-2026)</text>
+  
+  <text x="400" y="40" font-size="10.5" fill="#4B5563" font-weight="700" text-anchor="middle" letter-spacing="0.06em">SUBTEMA</text>
+  
+  <text x="660" y="40" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle" letter-spacing="0.04em">PALESTRAS NO CONGRESSO</text>
+  <text x="660" y="56" font-size="9" fill="#6B7280" text-anchor="middle">ESHRE 2026</text>
+  
+  <line x1="20" y1="70" x2="780" y2="70" stroke="#E5E7EB" stroke-width="1"/>
+  
+  <text x="400" y="104" font-size="12" font-weight="600" fill="#111827" text-anchor="middle">Patologias Endometriais</text>
+  <rect x="51" y="91" width="229" height="18" fill="#F59E0B" rx="2"/>
+  <text x="43" y="104" font-size="11" font-weight="700" fill="#B45309" text-anchor="end">4.982</text>
+  <rect x="520" y="91" width="0" height="18" fill="#3B82F6" rx="2"/>
+  <text x="528" y="104" font-size="11" font-weight="700" fill="#9CA3AF">0</text>
+
+  <text x="400" y="140" font-size="12" font-weight="600" fill="#111827" text-anchor="middle">Microbioma e Imunologia</text>
+  <rect x="106" y="127" width="174" height="18" fill="#F59E0B" rx="2"/>
+  <text x="98" y="140" font-size="11" font-weight="700" fill="#B45309" text-anchor="end">3.793</text>
+  <rect x="520" y="127" width="146" height="18" fill="#3B82F6" rx="2"/>
+  <text x="674" y="140" font-size="11" font-weight="700" fill="#1D4ED8">7</text>
+  
+  <text x="400" y="176" font-size="12" font-weight="600" fill="#111827" text-anchor="middle">Receptividade e Janela de Implantação</text>
+  <rect x="147" y="163" width="133" height="18" fill="#F59E0B" rx="2"/>
+  <text x="139" y="176" font-size="11" font-weight="700" fill="#B45309" text-anchor="end">2.900</text>
+  <rect x="520" y="163" width="42" height="18" fill="#3B82F6" rx="2"/>
+  <text x="570" y="176" font-size="11" font-weight="700" fill="#1D4ED8">2</text>
+  
+  <text x="400" y="212" font-size="12" font-weight="600" fill="#111827" text-anchor="middle">Preparo Endometrial e FET</text>
+  <rect x="149" y="199" width="131" height="18" fill="#F59E0B" rx="2"/>
+  <text x="141" y="212" font-size="11" font-weight="700" fill="#B45309" text-anchor="end">2.839</text>
+  <rect x="520" y="199" width="230" height="18" fill="#3B82F6" rx="2"/>
+  <text x="758" y="212" font-size="11" font-weight="700" fill="#1D4ED8">11</text>
+  
+  <text x="400" y="248" font-size="12" font-weight="600" fill="#111827" text-anchor="middle">Endométrio Fino e Espessura</text>
+  <rect x="160" y="235" width="120" height="18" fill="#F59E0B" rx="2"/>
+  <text x="152" y="248" font-size="11" font-weight="700" fill="#B45309" text-anchor="end">2.612</text>
+  <rect x="520" y="235" width="63" height="18" fill="#3B82F6" rx="2"/>
+  <text x="591" y="248" font-size="11" font-weight="700" fill="#1D4ED8">3</text>
+  
+  <text x="400" y="284" font-size="12" font-weight="600" fill="#111827" text-anchor="middle">Diálogo Embrião-Endométrio</text>
+  <rect x="170" y="271" width="110" height="18" fill="#F59E0B" rx="2"/>
+  <text x="162" y="284" font-size="11" font-weight="700" fill="#B45309" text-anchor="end">2.396</text>
+  <rect x="520" y="271" width="125" height="18" fill="#3B82F6" rx="2"/>
+  <text x="653" y="284" font-size="11" font-weight="700" fill="#1D4ED8">6</text>
+  
+  <text x="400" y="320" font-size="12" font-weight="600" fill="#111827" text-anchor="middle">Ômicas e Biomarcadores</text>
+  <rect x="186" y="307" width="94" height="18" fill="#F59E0B" rx="2"/>
+  <text x="178" y="320" font-size="11" font-weight="700" fill="#B45309" text-anchor="end">2.044</text>
+  <rect x="520" y="307" width="125" height="18" fill="#3B82F6" rx="2"/>
+  <text x="653" y="320" font-size="11" font-weight="700" fill="#1D4ED8">6</text>
+  
+  <text x="400" y="356" font-size="12" font-weight="600" fill="#991B1B" text-anchor="middle">Falha de Implantação Recorrente</text>
+  <rect x="198" y="343" width="82" height="18" fill="#F59E0B" rx="2"/>
+  <text x="190" y="356" font-size="11" font-weight="700" fill="#B45309" text-anchor="end">1.787</text>
+  <rect x="520" y="343" width="21" height="18" fill="#3B82F6" rx="2"/>
+  <text x="549" y="356" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+  
+  <text x="400" y="392" font-size="12" font-weight="600" fill="#991B1B" text-anchor="middle">Células-tronco e Regeneração</text>
+  <rect x="223" y="379" width="57" height="18" fill="#F59E0B" rx="2"/>
+  <text x="215" y="392" font-size="11" font-weight="700" fill="#B45309" text-anchor="end">1.229</text>
+  <rect x="520" y="379" width="21" height="18" fill="#3B82F6" rx="2"/>
+  <text x="549" y="392" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+
+  <line x1="280" y1="80" x2="280" y2="400" stroke="#E5E7EB" stroke-width="2"/>
+  <line x1="520" y1="80" x2="520" y2="400" stroke="#E5E7EB" stroke-width="2"/>
+</svg>
+<div class="figcap"><b>Figura 2.</b> Distribuição pareada por subtema (9 subtemas), ordenada por volume de literatura (OpenAlex, 2021-07-19 a 2026-07-18). Cada linha: artigos publicados (esquerda) e palestras no ESHRE 2026 (direita, total n=37). Faixa sombreada: zona de lacuna, os 2 subtemas de menor volume de literatura (Q1 &lt; 2.044 artigos, calculado sobre 9 pontos). Marcador vermelho: subtema de lacuna. Lacunas: Falha de Implantação Recorrente e Células-tronco e Regeneração; das 2, 2 tiveram ao menos uma palestra no congresso.</div>
+</div>
+
+<p>A Tabela 1 é a fonte auditável de todos os números da figura, incluindo a participação percentual de cada subtema no universo da literatura (coluna "% do universo", campo <span class="kbd">pct_literatura_5anos</span> do dado real).</p>
+<table>
+<thead><tr><th>Subtema</th><th style="text-align:right">Palestras</th><th style="text-align:right">Artigos (5 anos)</th><th style="text-align:right">% do universo</th><th>Lacuna</th><th>Lacuna coberta</th></tr></thead>
+<tbody><tr><td>Patologias Endometriais</td><td class='num'>0</td><td class='num'>4.982</td><td class='num'>27,1%</td><td>não</td><td>n/a</td></tr><tr><td>Microbioma e Imunologia</td><td class='num'>7</td><td class='num'>3.793</td><td class='num'>20,6%</td><td>não</td><td>n/a</td></tr><tr><td>Receptividade e Janela de Implantação</td><td class='num'>2</td><td class='num'>2.900</td><td class='num'>15,8%</td><td>não</td><td>n/a</td></tr><tr><td>Preparo Endometrial e FET</td><td class='num'>11</td><td class='num'>2.839</td><td class='num'>15,5%</td><td>não</td><td>n/a</td></tr><tr><td>Endométrio Fino e Espessura</td><td class='num'>3</td><td class='num'>2.612</td><td class='num'>14,2%</td><td>não</td><td>n/a</td></tr><tr><td>Diálogo Embrião-Endométrio</td><td class='num'>6</td><td class='num'>2.396</td><td class='num'>13,0%</td><td>não</td><td>n/a</td></tr><tr><td>Ômicas e Biomarcadores</td><td class='num'>6</td><td class='num'>2.044</td><td class='num'>11,1%</td><td>não</td><td>n/a</td></tr><tr><td>Falha de Implantação Recorrente</td><td class='num'>1</td><td class='num'>1.787</td><td class='num'>9,7%</td><td>sim</td><td>sim</td></tr><tr><td>Células-tronco e Regeneração</td><td class='num'>1</td><td class='num'>1.229</td><td class='num'>6,7%</td><td>sim</td><td>sim</td></tr></tbody>
+</table>
+<div class="cap">Tabela 1. Matriz de dados por subtema. Palestras: eixo congresso. Artigos e % do universo: eixo literatura (OpenAlex). Lacuna: pertence ao quartil inferior de volume, calculado sobre 9 subtemas.</div>
+<p>A coluna "% do universo" soma 133,7%, não 100% (a coluna equivalente do congresso, não mostrada, soma 99,9%). A diferença revela que os 9 subtemas não são mutuamente exclusivos do lado da literatura: um mesmo artigo pode atender a mais de uma string de busca de subtema (por exemplo, discutir microbioma e receptividade no mesmo resumo), e por isso é contado em mais de uma linha da tabela. Do lado do congresso, cada palestra foi classificada em um único subtema, o que explica a soma próxima de 100%. Essa assimetria é discutida na seção 5.</p>
+
+<p>A Tabela 2 reagrupa os mesmos 9 subtemas pelos 5 eixos temáticos que a camada semântica já declara para cada conceito (Bioengenharia, Clínica, Embriologia, Reprodução, Ômicas). É apenas outra tabulação dos mesmos números, sem interpretação; a leitura do padrão está na Discussão.</p>
+<table>
+<thead><tr><th>Eixo</th><th style="text-align:right">Subtemas (n)</th><th style="text-align:right">Palestras</th><th style="text-align:right">% palestras</th><th style="text-align:right">Artigos (5 anos)</th><th style="text-align:right">% literatura</th></tr></thead>
+<tbody><tr><td>Clínica</td><td class='num'>3</td><td class='num'>14</td><td class='num'>37,8%</td><td class='num'>10.433</td><td class='num'>56,8%</td></tr><tr><td>Ômicas</td><td class='num'>2</td><td class='num'>13</td><td class='num'>35,1%</td><td class='num'>5.837</td><td class='num'>31,7%</td></tr><tr><td>Reprodução</td><td class='num'>2</td><td class='num'>3</td><td class='num'>8,1%</td><td class='num'>4.687</td><td class='num'>25,5%</td></tr><tr><td>Embriologia</td><td class='num'>1</td><td class='num'>6</td><td class='num'>16,2%</td><td class='num'>2.396</td><td class='num'>13,0%</td></tr><tr><td>Bioengenharia</td><td class='num'>1</td><td class='num'>1</td><td class='num'>2,7%</td><td class='num'>1.229</td><td class='num'>6,7%</td></tr></tbody>
+</table>
+<div class="cap">Tabela 2. Subtemas, palestras e artigos agregados por eixo temático (campo <span class="kbd">eixo</span> de camada_semantica.json). As percentagens herdam a não exclusividade descrita acima: a coluna de literatura não soma 100%.</div>
+
+<h2 class="sec" data-n="4">Transparência semântica</h2>
+<p>Para que o isolamento da literatura seja replicável, cada subtema documenta abaixo as variáveis extraídas das palestras (os termos que a camada semântica reconhece) e a string de busca exata submetida ao OpenAlex. Qualquer pesquisador pode reexecutar essas buscas e obter a mesma volumetria.</p>
+
+<div class="transbox" style="margin-bottom: 24px;">
+  <details class="trans">
+    <summary><span class="tnome">ÂNCORA BASE: ENDOMÉTRIO EM REPRODUÇÃO</span><span class="teixo">query base</span></summary>
+    <div class="tbody">
+      <p style="font-size: 14.5px; margin-bottom: 16px;">Todos os subtemas cruzam obrigatoriamente com a seguinte query base, que estabelece o universo de trabalhos em reprodução assistida não-oncológica no OpenAlex:</p>
+      <div class="query">
+        <code class="q">&quot;endometrial&quot;|&quot;endometrium&quot;|&quot;uterine&quot;|&quot;intrauterine&quot;</code>
+        <span class="andop" style="margin-left: 0;">AND</span>
+        <code class="q">&quot;fertility&quot;|&quot;infertility&quot;|&quot;ivf&quot;|&quot;in vitro fertilization&quot;|&quot;icsi&quot;|&quot;assisted reproduction&quot;|&quot;assisted reproductive&quot;|&quot;embryo implantation&quot;|&quot;recurrent pregnancy loss&quot;|&quot;recurrent implantation failure&quot;|&quot;embryo transfer&quot;</code>
+        <span class="andop" style="margin-left: 0;">AND</span>
+        <code class="q">NOT cancer AND NOT oncology AND NOT carcinoma AND NOT sarcoma AND NOT tumor AND NOT malignancy</code>
+      </div>
+    </div>
+  </details>
+</div>
+
+<p>As strings de cada subtema listadas abaixo são combinadas com essa âncora base usando o operador lógico AND.</p>
+
+<div class="transbox">
+
+        <details class="trans">
+          <summary><span class="tnome">Receptividade e Janela de Implantação</span><span class="teixo">reprodução</span></summary>
+          <div class="tbody">
+            <div class="tlabel">Variáveis extraídas das palestras</div>
+            <div class="vars"><span class="var">endometrial receptivity</span><span class="var">window of implantation</span><span class="var">receptive endometrium</span><span class="var">implantation window</span><span class="var">endometrial microenvironment</span></div>
+            <div class="tlabel">String de busca na literatura (OpenAlex)</div>
+            <div class="query"><code class="q">&quot;receptivity&quot;|&quot;receptive&quot;|&quot;window of implantation&quot;|&quot;implantation window&quot;|&quot;woi&quot;</code><span class="andop">AND</span><code class="q">&quot;endometrial&quot;|&quot;endometrium&quot;|&quot;uterine&quot;|&quot;intrauterine&quot;</code><span class="andop">AND</span><code class="q">&quot;fertility&quot;|&quot;infertility&quot;|&quot;ivf&quot;|&quot;in vitro fertilization&quot;|&quot;icsi&quot;|&quot;assisted reproduction&quot;|&quot;assisted reproductive&quot;|&quot;embryo implantation&quot;|&quot;recurrent pregnancy loss&quot;|&quot;recurrent implantation failure&quot;|&quot;embryo transfer&quot;</code><span class="andop">AND</span><code class="q">NOT cancer AND NOT oncology AND NOT carcinoma AND NOT sarcoma AND NOT tumor AND NOT malignancy</code></div>
+          </div>
+        </details>
+        <details class="trans">
+          <summary><span class="tnome">Preparo Endometrial e FET</span><span class="teixo">clínica</span></summary>
+          <div class="tbody">
+            <div class="tlabel">Variáveis extraídas das palestras</div>
+            <div class="vars"><span class="var">endometrial preparation</span><span class="var">frozen embryo transfer</span><span class="var">luteal phase support</span><span class="var">artificial cycle</span><span class="var">natural cycle fet</span><span class="var">progesterone supplementation</span><span class="var">fet strategies</span></div>
+            <div class="tlabel">String de busca na literatura (OpenAlex)</div>
+            <div class="query"><code class="q">&quot;preparation&quot;|&quot;hormone replacement&quot;|&quot;hrt&quot;|&quot;artificial cycle&quot;|&quot;natural cycle&quot;|&quot;frozen embryo transfer&quot;|&quot;frozen-thawed embryo transfer&quot;|&quot;luteal phase support&quot;|&quot;progesterone supplementation&quot;</code><span class="andop">AND</span><code class="q">&quot;endometrial&quot;|&quot;endometrium&quot;|&quot;uterine&quot;|&quot;intrauterine&quot;</code><span class="andop">AND</span><code class="q">&quot;fertility&quot;|&quot;infertility&quot;|&quot;ivf&quot;|&quot;in vitro fertilization&quot;|&quot;icsi&quot;|&quot;assisted reproduction&quot;|&quot;assisted reproductive&quot;|&quot;embryo implantation&quot;|&quot;recurrent pregnancy loss&quot;|&quot;recurrent implantation failure&quot;|&quot;embryo transfer&quot;</code><span class="andop">AND</span><code class="q">NOT cancer AND NOT oncology AND NOT carcinoma AND NOT sarcoma AND NOT tumor AND NOT malignancy</code></div>
+          </div>
+        </details>
+        <details class="trans">
+          <summary><span class="tnome">Microbioma e Imunologia</span><span class="teixo">ômicas</span></summary>
+          <div class="tbody">
+            <div class="tlabel">Variáveis extraídas das palestras</div>
+            <div class="vars"><span class="var">endometrial microbiome</span><span class="var">endometrial microbiota</span><span class="var">uterine microbiome</span><span class="var">endometrial immunology</span><span class="var">chronic endometritis</span><span class="var">uterine NK cells</span><span class="var">microbiome in implantation</span></div>
+            <div class="tlabel">String de busca na literatura (OpenAlex)</div>
+            <div class="query"><code class="q">&quot;microbiome&quot;|&quot;microbiota&quot;|&quot;immunology&quot;|&quot;immune&quot;|&quot;nk cells&quot;|&quot;natural killer&quot;|&quot;cytokine&quot;|&quot;inflammation&quot;|&quot;endometritis&quot;|&quot;chronic endometritis&quot;|&quot;leukocytes&quot;|&quot;macrophages&quot;</code><span class="andop">AND</span><code class="q">&quot;endometrial&quot;|&quot;endometrium&quot;|&quot;uterine&quot;|&quot;intrauterine&quot;</code><span class="andop">AND</span><code class="q">&quot;fertility&quot;|&quot;infertility&quot;|&quot;ivf&quot;|&quot;in vitro fertilization&quot;|&quot;icsi&quot;|&quot;assisted reproduction&quot;|&quot;assisted reproductive&quot;|&quot;embryo implantation&quot;|&quot;recurrent pregnancy loss&quot;|&quot;recurrent implantation failure&quot;|&quot;embryo transfer&quot;</code><span class="andop">AND</span><code class="q">NOT cancer AND NOT oncology AND NOT carcinoma AND NOT sarcoma AND NOT tumor AND NOT malignancy</code></div>
+          </div>
+        </details>
+        <details class="trans">
+          <summary><span class="tnome">Diálogo Embrião-Endométrio</span><span class="teixo">embriologia</span></summary>
+          <div class="tbody">
+            <div class="tlabel">Variáveis extraídas das palestras</div>
+            <div class="vars"><span class="var">embryo-endometrial dialogue</span><span class="var">embryo-endometrial cross-talk</span><span class="var">maternal-fetal interface</span><span class="var">trophoblast invasion</span><span class="var">human embryonic-endometrial dialogue</span></div>
+            <div class="tlabel">String de busca na literatura (OpenAlex)</div>
+            <div class="query"><code class="q">&quot;crosstalk&quot;|&quot;interaction&quot;|&quot;dialogue&quot;|&quot;maternal-embryonic&quot;|&quot;maternal-fetal&quot;|&quot;embryo-endometrial&quot;|&quot;embryo-uterine&quot;|&quot;signaling&quot;</code><span class="andop">AND</span><code class="q">&quot;endometrial&quot;|&quot;endometrium&quot;|&quot;uterine&quot;|&quot;intrauterine&quot;</code><span class="andop">AND</span><code class="q">&quot;fertility&quot;|&quot;infertility&quot;|&quot;ivf&quot;|&quot;in vitro fertilization&quot;|&quot;icsi&quot;|&quot;assisted reproduction&quot;|&quot;assisted reproductive&quot;|&quot;embryo implantation&quot;|&quot;recurrent pregnancy loss&quot;|&quot;recurrent implantation failure&quot;|&quot;embryo transfer&quot;</code><span class="andop">AND</span><code class="q">NOT cancer AND NOT oncology AND NOT carcinoma AND NOT sarcoma AND NOT tumor AND NOT malignancy</code></div>
+          </div>
+        </details>
+        <details class="trans">
+          <summary><span class="tnome">Falha de Implantação Recorrente</span><span class="teixo">reprodução</span></summary>
+          <div class="tbody">
+            <div class="tlabel">Variáveis extraídas das palestras</div>
+            <div class="vars"><span class="var">recurrent implantation failure</span><span class="var">repeated implantation failure</span><span class="var">implantation failure</span><span class="var">implantation failure mechanisms</span></div>
+            <div class="tlabel">String de busca na literatura (OpenAlex)</div>
+            <div class="query"><code class="q">&quot;recurrent implantation failure&quot;|&quot;rif&quot;|&quot;repeated implantation failure&quot;|&quot;implantation failure&quot;</code><span class="andop">AND</span><code class="q">&quot;endometrial&quot;|&quot;endometrium&quot;|&quot;uterine&quot;|&quot;intrauterine&quot;</code><span class="andop">AND</span><code class="q">&quot;fertility&quot;|&quot;infertility&quot;|&quot;ivf&quot;|&quot;in vitro fertilization&quot;|&quot;icsi&quot;|&quot;assisted reproduction&quot;|&quot;assisted reproductive&quot;|&quot;embryo implantation&quot;|&quot;recurrent pregnancy loss&quot;|&quot;recurrent implantation failure&quot;|&quot;embryo transfer&quot;</code><span class="andop">AND</span><code class="q">NOT cancer AND NOT oncology AND NOT carcinoma AND NOT sarcoma AND NOT tumor AND NOT malignancy</code></div>
+          </div>
+        </details>
+        <details class="trans">
+          <summary><span class="tnome">Patologias Endometriais</span><span class="teixo">clínica</span></summary>
+          <div class="tbody">
+            <div class="tlabel">Variáveis extraídas das palestras</div>
+            <div class="vars"><span class="var">endometrial pathology</span><span class="var">endometrial pathologies</span><span class="var">endometrial polyp</span><span class="var">endometrial polyps</span><span class="var">endometrial complexity</span></div>
+            <div class="tlabel">String de busca na literatura (OpenAlex)</div>
+            <div class="query"><code class="q">&quot;pathology&quot;|&quot;pathologies&quot;|&quot;polyp&quot;|&quot;polyps&quot;|&quot;myoma&quot;|&quot;myomas&quot;|&quot;fibroid&quot;|&quot;fibroids&quot;|&quot;adenomyosis&quot;|&quot;synechiae&quot;|&quot;asherman&quot;|&quot;hyperplasia&quot;|&quot;endometriosis&quot;</code><span class="andop">AND</span><code class="q">&quot;endometrial&quot;|&quot;endometrium&quot;|&quot;uterine&quot;|&quot;intrauterine&quot;</code><span class="andop">AND</span><code class="q">&quot;fertility&quot;|&quot;infertility&quot;|&quot;ivf&quot;|&quot;in vitro fertilization&quot;|&quot;icsi&quot;|&quot;assisted reproduction&quot;|&quot;assisted reproductive&quot;|&quot;embryo implantation&quot;|&quot;recurrent pregnancy loss&quot;|&quot;recurrent implantation failure&quot;|&quot;embryo transfer&quot;</code><span class="andop">AND</span><code class="q">NOT cancer AND NOT oncology AND NOT carcinoma AND NOT sarcoma AND NOT tumor AND NOT malignancy</code></div>
+          </div>
+        </details>
+        <details class="trans">
+          <summary><span class="tnome">Ômicas e Biomarcadores</span><span class="teixo">ômicas</span></summary>
+          <div class="tbody">
+            <div class="tlabel">Variáveis extraídas das palestras</div>
+            <div class="vars"><span class="var">endometrial transcriptome</span><span class="var">endometrial omics</span><span class="var">endometrial receptivity array</span><span class="var">era test</span><span class="var">endometrial biomarkers</span><span class="var">omic analyses in implantation</span></div>
+            <div class="tlabel">String de busca na literatura (OpenAlex)</div>
+            <div class="query"><code class="q">&quot;transcriptomic&quot;|&quot;transcriptomics&quot;|&quot;transcriptome&quot;|&quot;proteomic&quot;|&quot;proteomics&quot;|&quot;proteome&quot;|&quot;metabolomic&quot;|&quot;metabolomics&quot;|&quot;metabolome&quot;|&quot;biomarker&quot;|&quot;biomarkers&quot;|&quot;gene expression&quot;|&quot;rna-seq&quot;|&quot;rnaseq&quot;|&quot;microarray&quot;|&quot;epigenomic&quot;|&quot;era test&quot;</code><span class="andop">AND</span><code class="q">&quot;endometrial&quot;|&quot;endometrium&quot;|&quot;uterine&quot;|&quot;intrauterine&quot;</code><span class="andop">AND</span><code class="q">&quot;fertility&quot;|&quot;infertility&quot;|&quot;ivf&quot;|&quot;in vitro fertilization&quot;|&quot;icsi&quot;|&quot;assisted reproduction&quot;|&quot;assisted reproductive&quot;|&quot;embryo implantation&quot;|&quot;recurrent pregnancy loss&quot;|&quot;recurrent implantation failure&quot;|&quot;embryo transfer&quot;</code><span class="andop">AND</span><code class="q">NOT cancer AND NOT oncology AND NOT carcinoma AND NOT sarcoma AND NOT tumor AND NOT malignancy</code></div>
+          </div>
+        </details>
+        <details class="trans">
+          <summary><span class="tnome">Células-tronco e Regeneração</span><span class="teixo">bioengenharia</span></summary>
+          <div class="tbody">
+            <div class="tlabel">Variáveis extraídas das palestras</div>
+            <div class="vars"><span class="var">endometrial stem cells</span><span class="var">endometrial regeneration</span><span class="var">endometrial organoid</span><span class="var">endometrial organoids</span><span class="var">tissue engineering endometrium</span><span class="var">uterine stem cells</span></div>
+            <div class="tlabel">String de busca na literatura (OpenAlex)</div>
+            <div class="query"><code class="q">&quot;stem cell&quot;|&quot;stem cells&quot;|&quot;regeneration&quot;|&quot;regenerative&quot;|&quot;prp&quot;|&quot;platelet-rich plasma&quot;|&quot;mesenchymal&quot;</code><span class="andop">AND</span><code class="q">&quot;endometrial&quot;|&quot;endometrium&quot;|&quot;uterine&quot;|&quot;intrauterine&quot;</code><span class="andop">AND</span><code class="q">&quot;fertility&quot;|&quot;infertility&quot;|&quot;ivf&quot;|&quot;in vitro fertilization&quot;|&quot;icsi&quot;|&quot;assisted reproduction&quot;|&quot;assisted reproductive&quot;|&quot;embryo implantation&quot;|&quot;recurrent pregnancy loss&quot;|&quot;recurrent implantation failure&quot;|&quot;embryo transfer&quot;</code><span class="andop">AND</span><code class="q">NOT cancer AND NOT oncology AND NOT carcinoma AND NOT sarcoma AND NOT tumor AND NOT malignancy</code></div>
+          </div>
+        </details>
+        <details class="trans">
+          <summary><span class="tnome">Endométrio Fino e Espessura</span><span class="teixo">clínica</span></summary>
+          <div class="tbody">
+            <div class="tlabel">Variáveis extraídas das palestras</div>
+            <div class="vars"><span class="var">thin endometrium</span><span class="var">endometrial thickness</span><span class="var">endometrial volume</span><span class="var">refractory endometrium</span></div>
+            <div class="tlabel">String de busca na literatura (OpenAlex)</div>
+            <div class="query"><code class="q">&quot;thin endometrium&quot;|&quot;endometrial thickness&quot;|&quot;thickness&quot;|&quot;thin lining&quot;|&quot;refractory&quot;</code><span class="andop">AND</span><code class="q">&quot;endometrial&quot;|&quot;endometrium&quot;|&quot;uterine&quot;|&quot;intrauterine&quot;</code><span class="andop">AND</span><code class="q">&quot;fertility&quot;|&quot;infertility&quot;|&quot;ivf&quot;|&quot;in vitro fertilization&quot;|&quot;icsi&quot;|&quot;assisted reproduction&quot;|&quot;assisted reproductive&quot;|&quot;embryo implantation&quot;|&quot;recurrent pregnancy loss&quot;|&quot;recurrent implantation failure&quot;|&quot;embryo transfer&quot;</code><span class="andop">AND</span><code class="q">NOT cancer AND NOT oncology AND NOT carcinoma AND NOT sarcoma AND NOT tumor AND NOT malignancy</code></div>
+          </div>
+        </details>
+</div>
+
+<h2 class="sec" data-n="5">Discussão</h2>
+<p>A comparação entre a composição do congresso e a distribuição da literatura permite ler o alinhamento da pauta de endométrio reprodutivo, com uma ressalva que precisa vir antes de qualquer leitura: com 37 palestras distribuídas por 9 subtemas, a contagem esperada por subtema, se a pauta fosse aleatória, é de apenas 4,1 palestras. Nenhum teste de significância foi aplicado, e nenhum deveria ser, porque as células são pequenas demais para sustentar os pressupostos desses testes. O que segue é leitura de distribuição, não inferência estatística, e não é um juízo sobre a qualidade das escolhas do comitê científico.</p>
+<p>Reagrupando os subtemas pelos eixos da camada semântica (Tabela 2), o padrão mais visível é que Bioengenharia, o eixo de menor volume de literatura, também recebeu a menor representação absoluta no congresso, empatada com o subtema de Falha de Implantação Recorrente do eixo Reprodução. É uma leitura compatível com um gargalo translacional (pesquisa regenerativa de endométrio ainda incipiente tanto na clínica quanto na publicação), mas também compatível com o fato de a amostra ser pequena demais para separar sinal de ruído nesse nível de granularidade. As duas leituras permanecem em aberto; este trabalho não decide entre elas.</p>
+<p>As lacunas merecem a mesma cautela. Os 2 subtemas de menor volume de literatura tiveram, cada um, ao menos uma palestra no congresso. Isso é compatível com seleção deliberada de temas emergentes, mas também é compatível com acaso: com 4,1 palestras esperadas por subtema em média, observar pelo menos uma palestra nos subtemas de cauda não é um evento raro. Chamar esse resultado de "sensibilidade da pauta a lacunas" seria uma inferência que o desenho do estudo não sustenta; o achado factual é apenas que as 2 lacunas tiveram cobertura no congresso, sem que se possa atribuir causa. Além disso, baixo volume de literatura é um proxy de atenção publicada, não uma medida direta de novidade científica: um subtema pouco publicado pode ser uma fronteira emergente ou pode ser um tema de interesse clínico restrito, e os dados aqui reunidos não distinguem as duas situações.</p>
+<p>Uma segunda leitura decorre da própria Tabela 1: as participações percentuais por subtema somam 133,7% do lado da literatura, porque os subtemas não são mutuamente exclusivos (um artigo pode atender a mais de uma string de busca), contra 99,9% do lado do congresso, onde cada palestra pertence a exatamente um subtema. Essa assimetria significa que comparações de proporção entre os dois eixos, incluindo as da Tabela 2, são aproximadas: a parcela de literatura atribuída a um subtema ou eixo pode estar inflada pela sobreposição com subtemas vizinhos, enquanto a parcela de palestras não tem esse viés. Qualquer leitura de "peso relativo" precisa considerar essa diferença estrutural entre os dois lados da comparação.</p>
+<h3>5.1 Limitações</h3>
+<p>Sete limitações delimitam o alcance, e nenhuma delas invalida o método: definem o que ele pode e não pode afirmar. A segmentação por palestra é heurística, com cortes de confiança variável. A amostra de 37 palestras distribuída por 9 subtemas produz células pequenas (média de 4,1 palestras por subtema), o que impede qualquer teste de significância e reduz a robustez dos percentuais; nenhum foi calculado. O critério de lacuna (Q1) é o quartil de apenas 9 valores, equivalente a escolher os 2 subtemas de menor volume, e deve ser lido como um corte ad hoc razoável, não como um teste estatístico. Os subtemas não são mutuamente exclusivos do lado da literatura (seção 5, parágrafo 4), o que torna qualquer soma de participações por subtema ou por eixo uma aproximação, não uma partição exata do universo. A granularidade do OpenAlex nem sempre atinge a especificidade dos subtemas, de modo que temas muito particulares podem cair em tópicos mais amplos. A cobertura mede sobreposição temática, não profundidade científica. E a camada semântica, que decide toda a classificação, foi construída e validada por especialistas de domínio: 8 dos 9 conceitos têm o campo de validação registrado como "sem-ciencia-dados" no próprio dado, e a concordância entre avaliadores independentes permanece não calculada (registrada como nula no metadado da camada). Isso não significa que a classificação esteja errada, mas significa que sua confiabilidade não foi quantificada por um processo estatístico separado da autoria dos próprios conceitos.</p>
+<h3>5.2 Reprodutibilidade</h3>
+<p>O estudo é replicável: a extração de termos usou o modelo Claude (Anthropic) apenas para transcrever e normalizar as falas; a camada semântica que decide a classificação é versionada e determinística; as strings de busca no OpenAlex são explícitas; a janela e o critério de lacuna (Q1 &lt; 2.044, sobre 9 subtemas) estão declarados. Reexecutar o pipeline sobre os mesmos dados curados produz os mesmos números. Reprodutibilidade não é o mesmo que validade estatística: garante que outro pesquisador chegue aos mesmos números, não que os números sustentem inferência causal.</p>
+
+<h2 class="sec" data-n="6">Conclusão</h2>
+<p>Este trabalho descreveu, de forma auditável e replicável, como a pauta de endométrio reprodutivo de um congresso se posiciona frente ao volume de literatura publicada no OpenAlex. Das 37 palestras curadas, a distribuição pelos 9 subtemas revelou concentrações e ausências mensuráveis: 2 subtemas caíram no quartil inferior de volume de publicação, um corte calculado sobre apenas 9 pontos, e 2 desses subtemas tiveram ao menos uma palestra no congresso. Com uma amostra de 37 palestras distribuída por 9 categorias que, do lado da literatura, não são mutuamente exclusivas, esse resultado é compatível tanto com seleção deliberada de temas emergentes quanto com variação esperada por acaso; o desenho observacional e descritivo deste estudo não permite distinguir as duas explicações, e este trabalho não afirma qual delas é verdadeira. O método não demonstra alinhamento nem desalinhamento da pauta, e não substitui a leitura crítica do conteúdo científico: oferece um instrumento auditável para descrever, não para provar, a posição relativa de um congresso no mapa da literatura. Sua contribuição central é a reprodutibilidade, não a detecção de tendências: a camada semântica versionada e as strings de busca explícitas permitem que qualquer pesquisador reexecute a análise e obtenha exatamente os mesmos números. Fortalecer essa leitura descritiva até o ponto de sustentar inferência estatística exigiria, no mínimo, três extensões: aplicar o método a múltiplas edições do congresso para ganhar tamanho de amostra, calcular a concordância entre avaliadores independentes na construção da camada semântica, e tratar explicitamente a sobreposição entre subtemas do lado da literatura em vez de reportá-la como limitação residual.</p>
+
+<h2 class="sec" data-n="7">Referências</h2>
+<p class="cap" style="margin-bottom:14px">As 37 referências abaixo correspondem às aulas curadas do congresso, no estilo Vancouver. Autores e títulos foram cruzados com a fonte original (vídeos e legendas das sessões); as minutagens permitiram identificar palestrantes omitidos pelas introduções dos moderadores. Itens entre colchetes indicam título descritivo ou pendência de identificação declarada, não suprimida.</p>
+<ol class="refs">
+<li><span class="ref-n">1.</span> Brickman JM. [The endometrium as the counterpart of implantation]. In: Session 12: Mimicking the human embryonic-endometrial dialogue in vitro, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">2.</span> Yague Serrano R. Different secretome profiles characterize euploid and aneuploid human embryos cultured up to 14 days in advanced 3D endometrial co-culture. In: Session 21: Rewriting embryo selection through hidden signals, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">3.</span> Xiang R. Transcriptomic signature of implantation failure based on endometrial immune profiling. In: Session 22: Unraveling the endometrial microenvironment: immune, spatial, and transcriptomic insights across uterine disorders, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">4.</span> Thanh LV. Impact of conception method and endometrial preparation on first trimester uterine artery Doppler and preeclampsia screening. In: Session 25: Determinants and interventions for short term outcome, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">5.</span> Becchetti [de Milão, pergunta do público]. [Natural or medicated cycle for frozen embryo transfer]. In: Session 25: Determinants and interventions for short term outcome, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">6.</span> Dominguez F. [The endometrium from several perspectives]. In: PCC07: Navigating endometrial complexity, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">7.</span> Tempest N. [Basic science endometrium from a clinical perspective]. In: PCC07: Navigating endometrial complexity, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">8.</span> Campagnolo L. [Endometrial aging and functional decline]. In: PCC07: Navigating endometrial complexity, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">9.</span> Götte M. [Endometrial stem cells]. In: PCC07: Navigating endometrial complexity, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">10.</span> Diaz-Gimeno P. Artificial intelligence models in endometrial pathology. In: PCC07: Navigating endometrial complexity, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">11.</span> Diaz-Gimeno P. Artificial intelligence models in endometrial factor evaluation in IVF. In: PCC07: Navigating endometrial complexity, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">12.</span> Paffoni A. [Endometrial receptivity and maternal age in young donor oocytes]. In: PCC12: Advances in reproductive science: spotlight on reproductive ageing, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">13.</span> Diaz-Gimeno P [dedução por cronograma relativo]. [Artificial intelligence algorithms in endometrium]. In: PCC14: MEFS exchange course: artificial intelligence in reproductive medicine: from evaluation to clinical integration, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">14.</span> Diaz-Gimeno P [dedução por cronograma relativo]. [Studying endometrial tissue]. In: PCC14: MEFS exchange course: artificial intelligence in reproductive medicine: from evaluation to clinical integration, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">15.</span> Nakagawa K. Tacrolimus improves pregnancy rates after euploid blastocyst transfer in recurrent implantation failure. In: Session 44: Immunology, microbiota and omic analyses in implantation and early pregnancy, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">16.</span> Mazzanti D. [The endometrium as a dynamic tissue in the female body]. In: Session 44: Immunology, microbiota and omic analyses in implantation and early pregnancy, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">17.</span> Pedersen CN. Dynamics of leukocytes in peripheral blood during the window of implantation. In: Session 44: Immunology, microbiota and omic analyses in implantation and early pregnancy, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">18.</span> Mackens S, Vajarelli A [chairs]. Endometrial preparation for frozen embryo transfers using a culture medium with GM-CSF. In: Session 46: Endometrial preparation to frozen embryo transfer under the spotlight, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">19.</span> Garcia Faura A. [Medication and vaginal progesterone support in ovulation]. In: Session 46: Endometrial preparation to frozen embryo transfer under the spotlight, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">20.</span> Patari A. [Embryo implantation: receptive endometrium and competent blastocyst]. In: Session 46: Endometrial preparation to frozen embryo transfer under the spotlight, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">21.</span> Molinaro P. Association between endometrial patterns and reproductive outcomes. In: Session 46: Endometrial preparation to frozen embryo transfer under the spotlight, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">22.</span> Samir S. Impact of pre-transfer serum progesterone fluctuation on implantation in a single aneuploid hormone replacement therapy frozen embryo transfer cycle. In: Session 46: Endometrial preparation to frozen embryo transfer under the spotlight, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">23.</span> Oguc M. [Different routes of progesterone in programmed cycles]. In: Session 65: Poster discussion session - Implantation and early pregnancy, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">24.</span> Patel U. Optimising endometrial preparation in women with thin endometrium undergoing frozen embryo transfer (FET). In: Session 65: Poster discussion session - Implantation and early pregnancy, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">25.</span> Li N. The optimal form of progesterone suppression in the luteal phase. In: Session 65: Poster discussion session - Implantation and early pregnancy, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">26.</span> Deligeoroglou E. Endometrial microbiota diversity and pregnancy outcomes in women with reproductive failure or infertility: a systematic review and meta-analysis. In: Session 65: Poster discussion session - Implantation and early pregnancy, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">27.</span> Moser P. Endometrial epithelial organoids to analyze trophoblast invasion. In: Session 65: Poster discussion session - Implantation and early pregnancy, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">28.</span> Shuaib M. Comparative effectiveness of endometrial preparation strategies for frozen embryo transfer: a network meta-analysis of live birth, clinical pregnancy, and miscarriage outcomes. In: Session 67: FET strategies in 2026, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">29.</span> Labata E. Progesterone behavior across different luteal phase support regimens in ART cycles compared with a true natural cycle. In: Session 67: FET strategies in 2026, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">30.</span> Sarvaleda M [menção]. [Progesterone level and vaginal absorption]. In: Session 67: FET strategies in 2026, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">31.</span> Salvaleda M. Route- and dose-dependent differences in endometrial progesterone and cortisol endocrinology. In: Session 67: FET strategies in 2026, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">32.</span> van de Berg J. Development of a 3D human endometrium in vitro model using menstrual blood-derived cells. In: Session 71: Poster discussion session - Stem Cells, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">33.</span> Spath K. [Vaginal microbiome analysis vs endometrial analysis]. In: Session 73: Debate: microbiome in implantation and early pregnancy: vaginal vs endometrial analysis, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">34.</span> Moreno I [abertura]. [Vaginal and endometrial microbiome in the same women]. In: Session 73: Debate: microbiome in implantation and early pregnancy: vaginal vs endometrial analysis, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">35.</span> Moreno I [rebuttal]. [Vaginal microbiota and information of the implantation site]. In: Session 73: Debate: microbiome in implantation and early pregnancy: vaginal vs endometrial analysis, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">36.</span> Danciu MDA. KIR polymorphisms influence endometrial dysbiosis, chronic endometritis, and antibiotic response in infertile women. In: Session 82: Genetic and molecular basis of infertility, ESHRE 2026 [Internet]; 2026; London.</li><li><span class="ref-n">37.</span> Lee H. Trophectoderm structural parameters from time-lapse based 3D blastocyst reconstruction: impacts on clinical and live birth outcomes. In: Session 83: The blastocyst story, ESHRE 2026 [Internet]; 2026; London.</li>
+</ol>
+
+<div class="foot">
+Módulo científico apartado do sistema de análise. Todos os números derivam de <span class="kbd">mapa_tematico.json</span> e as referências de <span class="kbd">bibliografia.json</span>; nenhum valor foi estimado. Título, rótulos, modelo de linguagem e estilo são configuráveis em <span class="kbd">config_artigo.json</span>, o que torna o módulo adaptável a outros domínios, congressos ou fontes sem alterar o código. Gerado em 2026-07-18.
+</div>
+
+</div></body></html>
